@@ -12,8 +12,10 @@ makesound(dash.key);
 animation(dash.key);
 });
 function animation(char){
+    console.log("i am active");
     let xyz=document.querySelector("."+char);
     xyz.classList.add("pressed");
+    console.log(xyz);
     setTimeout(function(xyz.classList.remove("pressed"),100){};
 }
 function makesound(char){
