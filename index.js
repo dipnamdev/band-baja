@@ -3,14 +3,19 @@ var num=document.querySelectorAll(".drum").length;
 
 for(var i=0; i<num; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-        //  var char = this.innerHTML;
          makesound(this.innerHTML);
+         animation(this.innerHTML);
     });
 }
 document.addEventListener("keypress",function(dash){
 makesound(dash.key);
-})
-
+animation(dash.key);
+});
+function animation(char){
+    let xyz=document.querySelector("."+char);
+    xyz.classList.add("pressed");
+    setTimeout(function(xyz.classList.remove("pressed"),100){};
+}
 function makesound(char){
     switch (char) {
         case "w":
